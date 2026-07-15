@@ -1,0 +1,213 @@
+/* .container 是把主要內容集中放在中間、控制寬度的外層盒子 */
+/* width: 90%; 表示容器寬度佔畫面 90% */
+/* max-width: 1000px; 但最大不要超過 1000px */
+/* margin: 0 auto; 上下外距 0，左右自動分配，讓區塊水平置中 */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+ /* RWD 圖片自適應 */
+/* max-width: 100%; 避免圖片超出螢幕 */
+/* height: auto; 依比例自動調整高度，避免變形 */
+/* display: block; 讓圖片變成區塊元素，自己獨占一行 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; 
+}
+
+/* =========================
+   TABLE 基本樣式
+========================= */
+
+/* .table-wrap：包住 table，當表格太寬時可以左右滑動 */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+}
+
+/* table 本體 */
+.table-wrap table {
+  width: 100%;
+  min-width: 700px;   /* 螢幕太小時，保留表格基本寬度，避免內容被擠爛 */
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/* 表格標題 */
+.table-wrap caption {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+/* 表頭與儲存格 */
+.table-wrap th,
+.table-wrap td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+/* 如果你希望英文單字/音標不要亂斷行，可以加這個 */
+.table-wrap th {
+  white-space: nowrap;
+}
+
+/* 發音按鈕 */
+.vocab-pronunciation {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.vocab-pronunciation:hover {
+  background-color: yellowgreen;
+}
+
+
+/* =========================
+   手機版
+========================= */
+@media (max-width: 767px) {
+  .vowel-list,
+  .consonant-list {
+    grid-template-columns: repeat(4, 1fr); /* 手機排版繼續保留一排 4 個 */
+    gap: 8px;
+  }
+
+  .vowels,
+  .consonants {
+    font-size: 18px; 
+    height: 68px; 
+    padding: 6px 4px; 
+    /* 以上三種設定：讓手機格子尺寸回到可承受範圍 */
+
+    margin-bottom: 0;
+    line-height: 1.15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+
+    /* 以下最關鍵兩個設定：因為像 [m母m]、[n母n]、[l母l] 這些字比較長，
+    如果不允許正常換行，就會把格子硬撐歪；加了之後它可以在格內自己折行，比較不會爆版。 */
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+ 
+   h4 {
+    text-align: center;
+    padding: 10px 12px;
+    margin: 0 0 6px 0;
+  }
+
+  p {
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .menu > li {
+    width: 100%;
+  }
+
+  .menu > li > a,
+  .menu-title {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+  }
+
+  .submenu {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    margin-top: 4px;
+    background-color: #34495e;
+  }
+
+  .image-container {
+    flex-direction: column; /* 改成垂直排列，避免手機太擠 */
+    }
+
+  .image-container figure { 
+    flex: 1 1 100%;  /* 每個 figure 佔滿整行 */
+    }
+
+     .table-wrap table {
+    min-width: 620px; /* 手機可稍微縮一點，但不要太小 */
+  }
+
+  .table-wrap caption {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .table-wrap th,
+  .table-wrap td {
+    padding: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .vocab-pronunciation {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
+
+
+
+  /* =========================
+   平板/桌機版
+
+  * RWD媒體查詢與彈性排列： @media (min-width: 768px)當螢幕變大時，切換成桌機版樣式  
+  RWD 排版觀念中，我們會讓手機版預設維持簡單的上下直排 。
+  接著利用 @media (min-width: 768px) 語法告訴網頁，當使用者的螢幕大於平板尺寸時，透過 display: flex; 與 flex-direction: row; 
+  將原本直排的容器轉為左右橫排 。只要掌握這個原則，就能應付絕大多數的網頁區塊自適應需求 。
+  補充：當螢幕寬度大於等於 768px 時，常拿來當「手機版切換成平板／桌機版」的參考分界，不是硬性標準。 
+========================= */
+
+@media (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p,
+  .hero ul li,
+  .sub-hero p {
+    font-size: 18px;
+  }
+
+  .sub-hero h2 {
+    font-size: 22px;
+  }
+}
+
