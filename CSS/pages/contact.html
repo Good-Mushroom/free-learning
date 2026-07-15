@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="zh-Hant-tw"> <!-- 告訴瀏覽器這個網頁是用「台灣繁體中文寫的」 -->
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="description" content="聯絡作者">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- RWD必備： <meta name="viewport" content="width=device-width, initial-scale=1.0">：能確保手機瀏覽器依裝置寬度正確顯示，避免內容在手機螢幕上縮小成無法閱讀的微小字體 。  -->
+
+        <title>聯絡作者</title>
+
+        <link rel="stylesheet" href="../CSS/base.css">  <!-- base這份放「一般外觀」和「共同基本設定」。 -->
+            <!-- link是用來引入外部 CSS 檔案的元素，rel指html頁面和連結檔案的關係，其屬性質應使用stylesheet，href用來指定 CSS 檔案的路徑 -->
+        <link rel="stylesheet" href="../CSS/RWD.css">    <!-- 這份只放RWD和「螢幕尺寸變化、圖片不爆版」比較有關的內容。 -->
+        <style>
+       
+            
+        </style>
+    </head>
+
+    <body> 
+        <header  class="site-header" id="top">
+            <img src="../images/logo.jpg" alt="網站Logo，這張自畫像是我一位大學好朋友幫我設計的！" title="網站Logo，這張圖片是我一位大學好朋友幫我設計的！" 
+                style="display: block; margin: 0 auto">
+                <!-- style 屬性是寫在某個 HTML 元素裡面的，專門用來直接替那個元素加 CSS 樣式。-->
+                  
+                <!-- style="display: block; margin: 0 auto" 整串意涵：把圖片顯示成區塊元素，然後左右自動置中。
+                            display: block; = 讓 <img> 變成區塊，自己獨占一行。
+                            margin: 0 auto; = 上下外距 0，左右自動分配，所以圖片會水平置中。-->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="../pages/about.html">關於作者</a></li>
+                    <li class="dropdown">
+                        <button class="menu-title">KK音標學習與案例</button>
+                        <ul class="submenu">
+                            <li> <a href="../pages/KK-phonetic-symbols.html">KK音標學習</a></li>
+                            <li> <a href="../pages/KK-application.html">單字應用教學</a></li>
+                            <li> <a href="../pages/KK-case-study.html">學習案例分享</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/IPA-introduction.html">IPA使用</a></li>
+                    <li><a href="../pages/contact.html">聯絡作者</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">  
+            <!-- main = 這一頁最主要的內容範圍。 -->
+            <section class="hero">
+                <h1>聯絡作者與意見反饋</h1>
+            </section>
+
+            <section class="sub-hero">
+               <h2>聯繫管道</h2>
+               <p><a href="mailto:asd1040753@gmail.com">信箱聯繫：asd1040753@gmail.com</a></p>
+               <p><a href="https://forms.gle/CZmVNvrUuc685EjT6" target="_blank">Google表單反饋 (將開啟新分頁)</a></p>
+
+                
+            </section>
+
+            <p> <button class="botton"> <a href="#top">回到頂端</a> </button></p>
+        </main>
+        
+        <footer class="site-footer">
+            <p>Copyright © 2026 by 網頁作者 All Rights Reserved.</p>
+        </footer>
+    </body>
+
+</html>

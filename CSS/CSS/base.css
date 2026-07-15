@@ -1,0 +1,365 @@
+/* * 代表全域選擇器，會套用到所有元素 */
+/*在 CSS 裡說的「box盒子」，就是指每一個 HTML 元素都像一個方塊區域，有內容、內距、邊框和外距。*/
+/*box-sizing: border-box; 的意思是：你設定的寬高，會把 padding (內距)和 border (邊框) 一起算進去。*/
+* {
+  box-sizing: border-box;
+}
+
+/* body 是整個網頁主體 */
+/* margin: 0; 先把瀏覽器預設外距清掉 */
+/* font-family: 設定字體 */
+/* line-height: 文字行高 */
+/* font-size: 基本文字大小 */
+/* background-color: 頁面背景色 */
+/* color: 頁面文字顏色 */
+body {
+  margin: 0;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
+
+h3 {
+  border-left: 6px solid #2c3e50;  /* 標題左邊加一條 6px 深藍色線條 */
+  margin: 0 0 10px 0; /* 外距：上 0、左右 0、下 10px，讓 h3 和下面 p 有點距離 */
+  padding: 10px; /* 標題內距，讓文字不要貼邊 */
+}
+
+h4 {
+  background-color: bisque;
+  margin: 0 0 10px 0; /* 外距：上 0、左右 0、下 10px，讓 h3 和下面 p 有點距離 */
+  padding: 20px; /* 標題內距，讓文字不要貼邊 */
+  border-radius: 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
+h4.summary-title {
+  background: none;
+  margin: 0 0 6px 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: left;
+  border-radius: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* base.css：桌機 / 平板先並排 */
+.image-container {
+    display: flex; /* 把這個元素設定成「彈性盒容器」，讓 figure 可以水平排列 */
+    flex-wrap: wrap; /* 如果空間不夠，允許換行 */
+    gap: 20px; /* 每張照片之間的間距 */
+    justify-content: flex-start; 
+      /* 把flex-start靠主軸的起點對齊 、ceter讓整組圖片置中、flex-end 往後靠齊 、space-between左右貼邊，中間平均分散 */
+}
+
+.image-container figure {
+    flex: 0 0 45%;  
+      /* flex: 1 1 45%的意思：
+          flex-grow: 1 ：個元素在有多出空間時，可以放大，而且是按照比例去分配空間 ； 0表示不要自動放大
+          flex-shrink: 1 ：元素在空間不夠時，可以縮小，而且也是按照比例縮小 ； 0表示不要自動縮小
+          flex-basis: 45% ：表示這個元素一開始的基準寬度是 45%，如果要併排三個則調成約33% */
+    margin: 0; /* 移除 figure 預設外距，避免版面跑掉 */
+    text-align: center; /* 圖片說明文字置中 */
+}
+
+.image-container img {
+    width: 100%; /* 圖片寬度撐滿 figure */
+    max-width: 100%; /* 防止圖片超出容器 */
+    height: auto;  /* 維持圖片原始比例，不變形 */
+    display: block;  /* 移除圖片下方多餘空白 */
+}
+
+
+.botton {
+ margin: 10px;
+}
+
+
+.botton:hover {
+  border-radius: 10px;
+  background-color:yellowgreen;
+}
+
+
+
+.vowels:hover,
+.consonants:hover {
+  background-color: yellowgreen;
+}
+
+/* .site-header 是頁首區塊 */
+/* background-color: 設定頁首背景色 */
+/* padding: 12px 0; 表示上下留白 12px，左右 0 */
+.site-header {
+  background-color: #2c3e50;
+  padding: 12px 0;
+}
+
+
+.nav {
+  background-color: #2c3e50;
+  padding: 10px 20px;
+}
+
+/* 主選單 */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* 主選單橫向排列 */
+  gap: 20px;
+  align-items: center;
+}
+
+
+/* 主選單每個項目 */
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+/* 主選單連結 */
+.menu li a,
+.menu-title  {
+  text-decoration: none; /*  去掉底線 */
+  color: white; /* 文字白色 */
+  padding: 8px 12px; /* 連結內距，上下 8px 左右 12px */
+  display: block; /* 讓 a 變成區塊，整塊都比較好點 */
+  font-size: 20px;
+}
+
+/* 因為 KK音標學習與案例 是 span，不是 a，所以要另外寫 */
+.menu-title {
+  color: white;
+  padding: 8px 12px;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;   /* 拿掉按鈕預設底色 */
+  border: none;       /* 拿掉按鈕預設邊框 */
+  outline: none;
+  font-family: inherit;
+  line-height: normal;
+}
+
+/* hover 選單裡的連結滑鼠移上去時的效果 、 focus 效果 、 span 滑鼠移上去也有一樣效果 */
+.menu li a:hover,
+.menu li a:focus,
+.menu-title:hover,
+.menu-title:hover,
+.menu-title:focus {
+  background-color: #34495e; /* 變更背景色 */
+  border-radius: 5px; /*  讓四角微圓 */
+}
+
+/* 子選單預設先隱藏 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin: 0;
+  padding: 0;
+  background-color: #2c3e50;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* 子選單每個 li 垂直排列 */
+.submenu li {
+  list-style: none; /* 子選單每個項目不要黑點 */
+  width: 100%;
+}
+
+/* 子選單連結 */
+.submenu li a {
+  display: block;
+  padding: 10px 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* 子選單 hover */
+.submenu li a:hover,
+.submenu li a:focus {
+  background-color: #34495e;
+}
+
+/* 滑鼠移上去或焦點進入時展開 */
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
+  display: block;
+}
+
+.topics ul {
+  list-style: none; /* 把清單前面的黑點取消掉 */
+  margin: 0;  /* 清除 ul 預設的外距 */
+  padding: 0; /* 清除 ul 預設的內距 */
+  display: flex; /* 這樣 ul 裡面的 li 預設就會從左到右排開，而不是一個疊一個往下排。 */
+  gap: 20px; /* 每個 li 卡片之間保留 20px 間距 */
+  align-items: stretch;  /* 讓同一排的項目自動拉成一樣高 */
+}
+
+.topics li {
+  flex: 1; /* 每個 li 平均分配寬度 */
+  border: 1px solid #ddd; /* 卡片外框：1px 淺灰色邊線 */
+  background: white; /* 卡片背景色設成白色 */
+  padding: 12px;  /* 卡片內距，讓內容不要貼邊 */
+  display: flex;  /* 把每個 li 也變成 flex 容器 */
+  flex-direction: column;  /* 讓 li 裡面的內容改成直向排列，上面是 h3，下面是 p */
+}
+
+.topics h3 {
+  text-align: center; /* 標題文字置中 */
+  border-left: 6px solid #2c3e50;  /* 標題左邊加一條 6px 深藍色線條 */
+  background-color: #b1c8de;  /* 標題背景顏色 */
+  min-height: 60px;  /* 標題區塊至少 60px 高，避免有的高有的低 */
+  margin: 0 0 10px 0; /* 外距：上 0、左右 0、下 10px，讓 h3 和下面 p 有點距離 */
+  padding: 10px; /* 標題內距，讓文字不要貼邊 */
+
+}
+
+
+/* .hero 是主視覺或主介紹區塊 */
+/* background-color: white; 白底 */
+/* margin-top: 20px; 跟上方區塊留距離 */
+/* padding: 20px; 內容和邊框之間留白 */
+/* border-radius: 8px; 該區塊四角圓角，但因為白色看不到 */
+.hero {
+  background-color: #ddd;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* .hero h1 主標題 */
+.hero h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+ p {
+  font-size: 18px; /* font-size: 16px; 段落文字大小 */
+                  /* text-indent: 2.1em段落都要縮排2個字元 */
+  text-align: justify;  /* 強制文字左右對齊 */
+  text-justify: inter-ideograph; /* 針對中文、日文等東亞文字優化間距 */ 
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.sub-hero ul li {
+  font-size: 18px; /* font-size: 16px; 段落文字大小 */
+  text-align: justify;  /* 強制文字左右對齊 */
+  text-justify: inter-ideograph; /* 針對中文、日文等東亞文字優化間距 */ 
+}
+
+
+.vowel-list,
+.consonant-list {
+  display: grid;  /* 把這個區塊變成 grid 網格容器 */
+  grid-template-columns: repeat(4, 1fr); /* 固定排成 4 欄，每一欄平均分配寬度 */
+  gap: 12px; /* 每個格子之間的間距 */
+  align-items: stretch;  /* 讓同一排的項目自動拉成一樣高 */
+}
+
+
+.vowels,
+.consonants {
+  background: white;  /* 按鈕背景顏色 */
+  border: 1px solid #ddd; /* 邊框，1px 灰色線 */
+  border-radius: 12px;
+  padding: 1rem 1.5rem;  /* 內距，上下 1rem、左右 1.5rem */
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s; /* 動畫過渡效果，讓變化比較順 */
+  font-size: 30px;
+  margin-bottom: 0.5rem;   /* 每顆按鈕下面再留一點空間 */
+  height: 85px;
+}
+
+.ii, .u, .e, .o, .ɝ, .ə {
+  color: red;
+}
+
+.p, .f, .θ, .t, .s, .ʃ, .tʃ, .k, .h {
+  color: red;
+}
+
+.sound-note {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* .site-footer 是頁尾 */
+/* text-align: center; 文字置中 */
+/* padding: 20px; 內距 */
+/* margin-top: 30px; 和上方內容拉開距離 */
+/* background-color: #ddd; 淺灰背景 */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #ddd;
+}
+
+.site-footer p {
+  margin: 0;
+  text-align: center;
+}
+
+.table-wrap { /* 選取 class 為 table-wrap 的元素（ <div class="table-wrap">）外面那層「包起來」的盒子，通常拿來做橫向捲動、限制寬度、或加外框。 */
+  overflow-x: auto; /* 當內容太寬、超出容器寬度時，出現「水平滾動條」。對手機或窄視窗很常用，讓表格可以左右滑 */
+  -webkit-overflow-scrolling: touch; /* 讓 iOS（iPhone/iPad）在滾動時更順暢（滑動感比較自然）。主要是給行動裝置用的優化 */
+}
+
+.table-wrap table { /* 選取 .table-wrap 裡面的 <table> */
+  width: 100%;/* 表格寬度佔滿 .table-wrap 容器的 100%。 */
+  min-width: 700px;/* 表格「最少」要有 700px 寬。如果容器比 700px 窄，就會超出，然後因為上面有 overflow-x: auto，就會出現橫向滾動。 */
+  border-collapse: collapse; /* 把相鄰格子的邊框合併成一條，不要有「雙線」的效果。一般做資料表都會開這個，比較整齊。 */
+}
+
+.table-wrap caption { /* 選取表格的 <caption>（標題）。 */
+  margin-bottom: 10px; /* 標題下方留 10px 的空隙，跟表格本體分開一點。 */
+  font-weight: bold; /* 字體加粗。 */
+  font-size: 22px;
+  text-align: center;/* 標題置中（但實際上可有可無，因為已經預設在中間）。 */
+
+}
+
+.table-wrap th, 
+.table-wrap td{  /* 同時選取表格的 <th> 和 <td>。 */
+  padding: 10px; /* 格子內容和邊框之間上下左右各留 10px，讓字不要貼邊，看起來比較舒服。 */
+  border: 1px solid #ccc; /* 給每個格子一圈 1px 的實線邊框，顏色是淺灰（#ccc）。 */
+  text-align: center;/* 格子內的文字置中。 */
+  font-size: 18px;
+}
+
+.vocab-pronunciation { /* 選取 class 為 vocab-pronunciation 的元素（你的「請點擊」按鈕）。 */
+  padding: 20px 20px; /* 上下 20px、左右 20px 的內距，讓按鈕有點「塊狀」的感覺，比較像可點擊的按鈕。 */
+  border:none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.vocab-pronunciation:hover {
+  border-radius: 10px;
+  background-color:yellowgreen;
+}

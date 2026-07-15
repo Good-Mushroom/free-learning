@@ -1,0 +1,230 @@
+<!DOCTYPE html> 
+<html lang="zh-Hant-tw"> <!-- 告訴瀏覽器這個網頁是用「台灣繁體中文寫的」 -->
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="description" content="KK音標學習">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- RWD必備： <meta name="viewport" content="width=device-width, initial-scale=1.0">：能確保手機瀏覽器依裝置寬度正確顯示，避免內容在手機螢幕上縮小成無法閱讀的微小字體 。  -->
+
+        <title>KK音標學習</title>
+
+        <link rel="stylesheet" href="../CSS/base.css">  <!-- base這份放「一般外觀」和「共同基本設定」。 -->
+            <!-- link是用來引入外部 CSS 檔案的元素，rel指html頁面和連結檔案的關係，其屬性質應使用stylesheet，href用來指定 CSS 檔案的路徑 -->
+        <link rel="stylesheet" href="../CSS/RWD.css">    <!-- 這份只放RWD和「螢幕尺寸變化、圖片不爆版」比較有關的內容。 -->
+        <style>
+       
+            
+        </style>
+    </head>
+
+    <body> 
+        <header  class="site-header" id="top">
+            <img src="../images/logo.jpg" alt="網站Logo，這張自畫像是我一位大學好朋友幫我設計的！" title="網站Logo，這張圖片是我一位大學好朋友幫我設計的！" 
+                style="display: block; margin: 0 auto">
+                <!-- style 屬性是寫在某個 HTML 元素裡面的，專門用來直接替那個元素加 CSS 樣式。-->
+                  
+                <!-- style="display: block; margin: 0 auto" 整串意涵：把圖片顯示成區塊元素，然後左右自動置中。
+                            display: block; = 讓 <img> 變成區塊，自己獨占一行。
+                            margin: 0 auto; = 上下外距 0，左右自動分配，所以圖片會水平置中。-->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="../index.html">首頁</a></li>
+                    <li><a href="../pages/about.html">關於作者</a></li>
+                    <li class="dropdown">
+                        <button class="menu-title">KK音標學習與案例</button>
+                        <ul class="submenu">
+                            <li> <a href="../pages/KK-phonetic-symbols.html">KK音標學習</a></li>
+                            <li> <a href="../pages/KK-application.html">單字應用教學</a></li>
+                            <li> <a href="../pages/KK-case-study.html">學習案例分享</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/IPA-introduction.html">IPA使用</a></li>
+                    <li><a href="../pages/contact.html">聯絡作者</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">  
+            <section class="hero">
+                <h1>KK音標簡介</h1>
+                <p> KK 音標於 1940 年代由美國語言學家 Kenyon 與 Knott 創立，是台灣最普遍使用的美式英語發音系統。
+                    其符號直覺、易學，學習者只需熟記 17 個母音與 24 個子音，便能精準掌握英語發音。</p>
+                <p>💡<b>觀念釐清：</b>許多人誤以為英語只有 5 個母音（a, e, i, o, u），其實這只是「字母」的數量。
+                    在實際的發音系統中，美式英語總共包含了 17 種不同的母音發音！</p>
+                 <p>🔊<b>互動學習：</b>「點擊音標即可播放作者自錄的發音」，讓你不只用眼睛記符號，還能直接用耳朵辨識發音。
+                    透過反覆點擊、反覆聆聽，你可以更快建立音標與實際聲音之間的連結，提升發音辨識與記憶效果。每個音標念2次，皆為3秒。</p>    
+
+
+            </section>
+
+            <section class="sub-hero">
+               <h2>一、17個母音 (Vowels)</h2>
+               <h3>單母音</h3> 
+                    <p><b>5 個長母音：[i]、[u]、[e]、[o]、[ɝ]</b><br/>
+                        在發音時，請稍微拉長聲音的長度，並讓口腔肌肉保持一點「緊繃感」，這樣就能清楚地跟輕快短促的「短母音」做出區別喔！</p>
+                    <p><b>[æ]、[ɛ]嘴型大小差異，音有所不同：</b>[æ]嘴巴張到最大發音、[ɛ]正常張嘴發音 </p>   
+                    <p><b>[ɝ]、[ɚ]捲舌音：</b>發音時，要將舌頭捲起來，會有明顯的差異喔！</p> 
+
+                    <p>💡<b>記憶小技巧：</b>作者將單母音分為6組，依序「由左至右、由上至下」來練習，將發音相似、嘴型相近的音標歸類在一起，更好記憶！</p>
+                    
+                <div class="vowel-list"> 
+                        <!-- 為了兼顧電腦與手機版面呈現，將grid網格設定為一行最多4格 -->
+                        <!-- onclick="..."：當按鈕被點擊時，執行裡面的 JavaScript-->
+                        <!-- new Audio('../audios/[a].mp3')：建立一個新的音訊物件，並指定音檔路徑 -->
+                        <!-- .play()：讓這個音訊開始播放 -->
+                    <h4 class="div h4">第1組</h4>     
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɑ].m4a').play()">[ɑ]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ʌ].m4a').play()">[ʌ]</button>
+                </div>
+
+                <div class="vowel-list"> 
+                    <h4>第2組</h4> 
+                    <button class="vowels ii" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ii].m4a').play()">[i]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɪ].m4a').play()">[ɪ]</button>
+                </div>
+
+
+                <div class="vowel-list"> 
+                    <h4>第3組</h4>
+                    <button class="vowels u" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[u].m4a').play()">[u]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ʊ].m4a').play()">[ʊ]</button>
+                </div>
+
+                <div class="vowel-list"> 
+                    <h4>第4組</h4>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[æ].m4a').play()">[æ]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɛ].m4a').play()">[ɛ]</button>
+                    <button class="vowels e" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[e].m4a').play()">[e]</button>
+                </div>
+
+                <div class="vowel-list"> 
+                    <h4>第5組</h4>
+                    <button class="vowels o" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[o].m4a').play()">[o]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɔ].m4a').play()">[ɔ]</button>
+                </div>
+
+                <div class="vowel-list"> 
+                    <h4>第6組</h4>
+                    <button class="vowels ɝ" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɝ].m4a').play()">[ɝ]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɚ].m4a').play()">[ɚ]</button>
+                    <button class="vowels ə" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ə].m4a').play()">[ə]</button>
+                </div>
+
+                <h3>雙母音</h3>
+                <div class="vowel-list"> 
+                    <h4>僅1組</h4>       
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[aɪ].m4a').play()">[aɪ]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[aʊ].m4a').play()">[aʊ]</button>
+                    <button class="vowels" onclick="new Audio('../audios/KK Phonetic Symbols/Vowels/[ɔɪ].m4a').play()">[ɔɪ]</button>
+                </div>
+            </section>
+            <hr/>
+            <section class="sub-hero">
+               <h2 id="middle">二、24個子音 (Consonants)</h2>
+                    <p> 子音其實比母音更好學！因為大部分的子音都跟我們熟悉的自然發音相對應，只要額外記住少數幾個特殊符號就可以了。
+                        在語言學的「語音學（Phonetics）」中，特別強調子音在口腔裡的「發音位置（Place of Articulation, POA）」。透過發音位置來分類，會讓大腦記憶得更牢固。</p>
+                    <p><b>無聲子音：[p]、[f]、[θ]、[t]、[s]、[ʃ]、[tʃ]、[k]、[h]。</b>發音時聲帶不振動，聲音較清楚、較輕。</p>
+                    <p><b>💡記憶方式：</b>請將相同嘴型與發音位置的子音對應起來。在接下來的學習中，你可以想像發音的部位是由外而內：
+                            從最外側的「雙唇音」開始，逐漸向口腔深處推進，最後到達最深處的「喉音」，藉此建立起清晰的發音地圖。</p>
+                    
+                
+                <h3> 雙脣音 (Labiodental)</h3>
+                    <p>發音方式：上排門牙輕觸下唇發音。備註：[m母m]代表[m]在母音前後有兩種音。</p>
+                <div class="consonant-list">
+                    <h4>第1組</h4> 
+                    <button class="consonants p" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[p].m4a').play()">[p]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[b].m4a').play()">[b]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[w].m4a').play()">[w]</button>
+                    <h4>兩種發音</h4> 
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[m母m].m4a').play()">[m母m]</button>
+                </div>
+                
+                <h3> 唇齒音 (Labiodental)</h3>
+                    <p>發音方式：將舌尖放在上下排門牙之間發音。</p>
+                <div class="consonant-list">
+                    <h4>僅1組</h4> 
+                    <button class="consonants f" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[f].m4a').play()">[f]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[v].m4a').play()">[v]</button>
+                </div>
+
+                <h3> 齒間音 (Interdentals)</h3>
+                    <p>發音方式：將舌尖置於上下排門牙中間。</p>
+                <div class="consonant-list">
+                    <h4>僅1組</h4> 
+                    <button class="consonants θ" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[θ].m4a').play()">[θ]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[ð].m4a').play()">[ð]</button>
+                </div>
+
+                <h3> 齒齦音 (Alveolar)</h3>
+                    <p>發音方式：舌尖頂住上排門牙後方的牙齦發音</p>
+                    <p>備註：[n母n = ən]、[l母l=!= əl]、[r母r]代表[m]、[l]、[r]在母音前後有兩種音。</p>
+                <div class="consonant-list">
+                    <h4>第1組</h4> 
+                    <button class="consonants t" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[t].m4a').play()">[t]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[d].m4a').play()">[d]</button>
+                </div> 
+                <div class="consonant-list">
+                    <h4>第2組</h4> 
+                    <button class="consonants s" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[s].m4a').play()">[s]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[z].m4a').play()">[z]</button>
+                </div>
+                <div class="consonant-list">
+                    <h4>兩種發音</h4>  
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[n母n = ən].m4a').play()">[n母n]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[l母l = əl].m4a').play()">[l母l]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[r母r].m4a').play()">[r母r]</button>
+                </div>
+
+                <h3> 齒齦後音 (Post-alveolar)</h3>
+                    <p>發音方式：舌尖位置比齒齦音再往後一點，氣流從狹縫中擠出來，聽起來有摩擦感。</p>
+                <div class="consonant-list">
+                    <h4>第1組</h4> 
+                    <button class="consonants ʃ" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[ʃ].m4a').play()">[ʃ]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[ʒ].m4a').play()">[ʒ]</button>
+                </div>   
+                <div class="consonant-list">
+                    <h4>第2組</h4> 
+                    <button class="consonants tʃ" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[tʃ].m4a').play()">[tʃ]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[dʒ].m4a').play()">[dʒ]</button>
+                </div>
+
+                <h3> 硬顎音 (Palatal)</h3>
+                        <p>發音方式：舌面抬高，接近上顎中間，讓氣流從狹窄空間通過而發音。</p>
+                <div class="consonant-list">
+                    <h4>僅1組</h4>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[j].m4a').play()">[j]</button>
+                </div>
+
+                <h3> 軟顎音 (Velar)</h3>
+                    <p>發音方式：舌後面往上抬，靠近喉嚨前的軟顎。</p>
+                <div class="consonant-list">
+                    <h4>僅1組</h4>
+                    <button class="consonants k" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[k].m4a').play()">[k]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[g].m4a').play()">[g]</button>
+                    <button class="consonants" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[ŋ].m4a').play()">[ŋ]</button>
+                </div>
+
+                <h3> 喉音 (Glottal)</h3>
+                    <p>發音方式：在喉嚨裡發音。</p>
+                <div class="consonant-list">
+                    <h4>僅1組</h4>
+                    <button class="consonants h" onclick="new Audio('../audios/KK Phonetic Symbols/Consonants/[h].m4a').play()">[h]</button>
+                </div>
+            </section>
+
+            <p> <button class="botton"> <a href="#top">   回到頂端、KK音標簡介、母音</a></button>
+                <button class="botton"> <a href="#middle">回到中間、子音</a> </button></p>
+                <button class="botton"> <a href="../pages/KK-application.html">基本音標學會了嗎？來嘗試看看實際運用吧！</a> </button></p>
+        </main>
+
+
+
+
+        <footer class="site-footer">
+            <p>Copyright © 2026 by 網頁作者 All Rights Reserved.</p>
+        </footer>
+    </body>
+
+</html>
