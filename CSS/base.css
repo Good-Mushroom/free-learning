@@ -46,6 +46,13 @@ h4.summary-title {
   border-radius: 0;
 }
 
+.word-set {
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  padding: 28px;
+}
+
 a {
   color: black;
   text-decoration: none;
