@@ -346,8 +346,7 @@ a {
   margin-bottom: 10px; /* 標題下方留 10px 的空隙，跟表格本體分開一點。 */
   font-weight: bold; /* 字體加粗。 */
   font-size: 22px;
-  text-align: center;/* 標題置中（但實際上可有可無，因為已經預設在中間）。 */
-
+  text-align: center; /* 標題置中（但實際上可有可無，因為已經預設在中間）。 */
 }
 
 .table-wrap th, 
