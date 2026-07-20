@@ -46,6 +46,15 @@ h4.summary-title {
   border-radius: 0;
 }
 
+.caption-title {
+  background-color: bisque;
+  margin: 10px 10px 10px 10px; /* 外距：上 0、左右 0、下 10px */
+  padding: 20px; /* 標題內距，讓文字不要貼邊 */
+  border-radius: 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
 .word-set {
   font-size: 18px;
   text-align: center;
